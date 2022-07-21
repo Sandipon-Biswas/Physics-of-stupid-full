@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Rancho&display=swap");
+
+h1,
+h2,
+h6,
+h5,
+h3,
+p {
+  font-family: "Poppins", sans-serif;
+}
+a {
+  font-family: "Poppins", sans-serif;
+}
+::placeholder {
+  color: rgb(136, 143, 145);
+  opacity: 1; /* Firefox */
+  font-size: 15px;
+}
+body {
+  background: #06111a;
+
+  margin-left: -31px;
+}
+.start-all {
+  display: flex;
+  justify-content: center;
+}
+.stimg {
+  margin-left: 31px;
+}
+img {
+  max-width: 100%;
+}
+.log-in-img {
+  background: Linear-Gradient(To Left Bottom, Rgb(34, 45, 56), Rgb(13, 17, 23));
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.log-in-form {
+  background: Linear-Gradient(To Left Bottom, Rgb(34, 45, 56), Rgb(13, 17, 23));
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  padding: 2rem 3.4rem !important;
+}
+input {
+  background: #06111a;
+  border: 1px solid #ffffff;
+  padding: 7px 80px 7px 45px;
+  width: 100%;
+  color: white;
+  border-radius: 20px;
+  /* margin-bottom: 0rem; */
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  width: 10px;
+}
+.p-l-1 {
+  padding-left: 1rem;
+}
+.row.mb-2.p-l-1 {
+  padding-right: 10px;
+}
+.ipp {
+  position: relative;
+}
+.icone {
+  left: 0;
+  top: 5px;
+}
+button.btn.btn-primary.py-2.br30.px-5.br20.btn-hover.color-9 {
+  border-radius: 25px;
+  font-size: 17px;
+  padding: 7px 36px 10px 36px !important;
+}
+
+.btn1234 {
+  border-radius: 25px !important;
+  font-size: 17px !important;
+  padding: 7px 36px 10px 36px !important;
+}
+
+.br20 {
+  border-radius: 20px;
+}
+.br30 {
+  border-radius: 30px;
+}
+.password-i {
+  position: relative;
+}
+.bg2 {
+  padding-left: 2rem;
+}
+.icon-e {
+  position: absolute;
+  right: 15px;
+  bottom: 8px;
+}
+.key {
+  position: absolute;
+  left: 20px;
+  bottom: 8px;
+}
+.user-i {
+  position: relative;
+}
+.user {
+  position: absolute;
+  left: 20px;
+  bottom: 8px;
+}
+.btn {
+  border-radius: 10px;
+}
+.step-log-in-1 {
+  display: none;
+}
+.step-sign-in-1 {
+  display: none;
+}
+.d-none {
+  display: none;
+}
+.\31 stdiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  width: 13px;
+}
+.form-check.d-flex {
+  margin-top: 4px;
+}
+.form-group {
+  margin-bottom: 1.3rem !important;
+}
+/* responstiv */
+@media only screen and (max-width: 770px) {
+  .imgh {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .log-in-form {
+    padding: 2rem 1.4rem !important;
+  }
+}
+@media only screen and (max-width: 370px) {
+  input {
+    padding: 7px 45px 7px 45px;
+  }
+  .btn1234 {
+    padding: 6px 20px 8px 20px !important;
+  }
+  .step-log-in {
+    margin: 0 1rem;
+  }
+}

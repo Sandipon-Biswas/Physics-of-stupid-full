@@ -1,0 +1,21 @@
+i.fa-solid.fa-arrow-left {
+  color: black;
+  background: white;
+  padding: 6px 7px;
+  font-size: 15px;
+  border-radius: 50%;
+  margin-left: 0px;
+}
+a.More-Courses1 {
+  color: white;
+  padding: 7px 30px 8px 13px;
+  font-size: 19px;
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 500px) {
+  .box {
+    padding: 1rem 1rem;
+    margin-top: 0rem;
+  }
+}

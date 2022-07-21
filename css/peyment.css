@@ -1,0 +1,219 @@
+.step-wizard-list {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  list-style-type: none;
+  border-radius: 10px;
+  display: flex;
+  padding: 20px 10px;
+  position: relative;
+  z-index: 10;
+}
+.step-wizard-item {
+  padding: 0 20px;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+}
+.step-wizard-item + .step-wizard-item:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 19px;
+  background: #0e4b80;
+  width: 100%;
+  height: 2px;
+  transform: translateX(-50%);
+  z-index: -10;
+}
+.progress-count {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: 600;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  color: transparent;
+}
+.progress-count:after {
+  content: "";
+  height: 40px;
+  width: 40px;
+  background: #0e4b80;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: -10;
+}
+.progress-count:before {
+  content: "";
+  height: 10px;
+  width: 20px;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -60%) rotate(-45deg);
+  transform-origin: center center;
+}
+.progress-label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.current-item .progress-count:before,
+.current-item ~ .step-wizard-item .progress-count:before {
+  display: none;
+}
+.current-item ~ .step-wizard-item .progress-count:after {
+  height: 10px;
+  width: 10px;
+}
+.current-item ~ .step-wizard-item .progress-label {
+  opacity: 0.5;
+}
+.current-item .progress-count:after {
+  background: rgb(0, 0, 0);
+  border: 2px solid #0e4b80;
+}
+.current-item .progress-count {
+  color: #0e4b80;
+}
+.peyemnt-box {
+  border: 2px dashed #514f58;
+  border-radius: 19px;
+  padding: 11px 10px;
+}
+.d-border {
+  border: 2px dashed #514f58;
+  border-radius: 10px;
+  padding: 5px;
+}
+.bg-c-box.text-light {
+  background: #d62267;
+  border-radius: 11px;
+}
+input.form-control {
+  background: black;
+  /* border-radius: 10px; */
+}
+input.form-control:focus {
+  background: black !important;
+  /* border-radius: 10px; */
+}
+/* last step */
+
+.alert {
+  font-size: 25px;
+  font-family: sans-serif;
+  text-align: center;
+  width: 300px;
+  height: 100px;
+  padding-top: 150px;
+  position: relative;
+
+  border-radius: 2%;
+}
+
+.alert::before {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  border-radius: 100%;
+  inset: 20px 0px 0px 100px;
+  font-size: 60px;
+  line-height: 100px;
+  border: 5px solid gray;
+  animation-name: reveal;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+}
+
+.alert > .alert-body {
+  opacity: 0;
+  animation-name: reveal-message;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes reveal-message {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.success {
+  color: green;
+}
+
+.success::before {
+  content: "✓";
+  background-color: #eff;
+  box-shadow: 0px 0px 12px 7px rgba(200, 255, 150, 0.8) inset;
+  border: 5px solid green;
+}
+
+.error {
+  color: red;
+}
+
+.error::before {
+  content: "✗";
+  background-color: #fef;
+  box-shadow: 0px 0px 12px 7px rgba(255, 200, 150, 0.8) inset;
+  border: 5px solid red;
+}
+
+@keyframes reveal {
+  0% {
+    border: 5px solid transparent;
+    color: transparent;
+    box-shadow: 0px 0px 12px 7px rgba(255, 250, 250, 0.8) inset;
+    transform: rotate(1000deg);
+  }
+  25% {
+    border-top: 5px solid gray;
+    color: transparent;
+    box-shadow: 0px 0px 17px 10px rgba(255, 250, 250, 0.8) inset;
+  }
+  50% {
+    border-right: 5px solid gray;
+    border-left: 5px solid gray;
+    color: transparent;
+    box-shadow: 0px 0px 17px 10px rgba(200, 200, 200, 0.8) inset;
+  }
+  75% {
+    border-bottom: 5px solid gray;
+    color: gray;
+    box-shadow: 0px 0px 12px 7px rgba(200, 200, 200, 0.8) inset;
+  }
+  100% {
+    border: 5px solid gray;
+    box-shadow: 0px 0px 12px 7px rgba(200, 200, 200, 0.8) inset;
+  }
+}
+
+/* last step */
+
+@media only screen and (max-width: 365px) {
+  .step-wizard-item {
+    padding: 0 0px;
+  }
+}
